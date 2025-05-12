@@ -3,12 +3,15 @@
 <head>
     <title>Error</title>
     <style>
-        .error { color: red; }
+        .error { color: #d9534f; padding: 15px; background: #f8d7da; border-radius: 5px; }
+        .home-link { display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h1 class="error">Error</h1>
-    <p>{{ message }}</p>
-    <a href="/">Try Again</a>
+    <div class="error">
+        <h2>Error</h2>
+        <p>{{ message }}</p>
+        <a href="/" class="home-link">← Try Again</a>
+    </div>
 </body>
 </html>
