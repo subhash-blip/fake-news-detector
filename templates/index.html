@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detector</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        textarea, input { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #4CAF50; color: white; padding: 10px 15px; border: none; }
+    </style>
+</head>
+<body>
+    <h1>Fake News Detector</h1>
+    <form action="/analyze" method="POST">
+        <h3>Option 1: Analyze URL</h3>
+        <input type="url" name="url" placeholder="Enter news article URL">
+        
+        <h3>Option 2: Paste Text</h3>
+        <textarea name="text" rows="10" placeholder="Or paste news text here..."></textarea>
+        
+        <button type="submit">Analyze Credibility</button>
+    </form>
+</body>
+</html>

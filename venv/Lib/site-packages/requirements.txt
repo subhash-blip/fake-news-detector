@@ -1,0 +1,8 @@
+# requirements.txt - Essential dependencies
+Flask==2.2.3
+textblob==0.17.1
+nltk==3.8.1
+gunicorn==20.1.0
+
+# Python version (in runtime.txt)
+python-3.10.8
