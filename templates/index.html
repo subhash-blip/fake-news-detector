@@ -3,21 +3,29 @@
 <head>
     <title>Fake News Detector</title>
     <style>
-        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
         textarea, input { width: 100%; padding: 10px; margin: 10px 0; }
-        button { background: #4CAF50; color: white; padding: 10px 15px; border: none; }
+        button { background: #4285F4; color: white; border: none; padding: 10px 20px; }
+        .tab { margin-bottom: 20px; }
     </style>
 </head>
 <body>
     <h1>Fake News Detector</h1>
-    <form action="/analyze" method="POST">
-        <h3>Option 1: Analyze URL</h3>
-        <input type="url" name="url" placeholder="Enter news article URL">
-        
-        <h3>Option 2: Paste Text</h3>
-        <textarea name="text" rows="10" placeholder="Or paste news text here..."></textarea>
-        
-        <button type="submit">Analyze Credibility</button>
-    </form>
+    
+    <div class="tab">
+        <h3>Analyze URL:</h3>
+        <form method="POST" action="/analyze">
+            <input type="url" name="url" placeholder="https://example.com/news" required>
+            <button type="submit">Check URL</button>
+        </form>
+    </div>
+    
+    <div class="tab">
+        <h3>Or paste text:</h3>
+        <form method="POST" action="/analyze">
+            <textarea name="text" rows="10" placeholder="Paste news content here..."></textarea>
+            <button type="submit">Analyze Text</button>
+        </form>
+    </div>
 </body>
 </html>

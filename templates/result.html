@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Results</title>
+    <title>Analysis Result</title>
     <style>
         .score { 
             font-size: 24px; 
-            color: {% if score > 0.7 %}#4CAF50{% elif score > 0.4 %}#FFC107{% else %}#F44336{% endif %};
+            color: {% if score >= '70%' %}green{% elif score >= '40%' %}orange{% else %}red{% endif %};
+            margin: 20px 0;
         }
+        .source { color: #666; font-style: italic; }
     </style>
 </head>
 <body>
-    <h1>{{ title }}</h1>
-    <div class="score">Credibility Score: {{ "%.0f"|format(score*100) }}/100</div>
+    <h1>Analysis Result</h1>
+    <div class="source">{{ source }}</div>
+    <div class="score">Credibility: {{ score }}</div>
+    
+    <h3>Content Preview:</h3>
     <p>{{ text }}</p>
-    <a href="/">Analyze another</a>
+    
+    <a href="/">Analyze Another</a>
 </body>
 </html>
